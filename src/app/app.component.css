@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+
+.icon-attach {
+  font-size: 230%;
+  line-height: 0.125;
+}
+
+.form-field {
+  display: flex;
+}

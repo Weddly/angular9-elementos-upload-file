@@ -1,0 +1,30 @@
+<form [formGroup]="formulario">
+  <mat-form-field class="form-field" style="width: 30%" appearance="outline">
+    <mat-label>Termo</mat-label>
+    <input
+      type="text"
+      matInput
+      (click)="termoInput.click()"
+      controlName="termoNome"
+      readonly
+    />
+    <mat-icon
+      class="icon-attach"
+      matSuffix
+      (click)="termoInput.click()"
+      style="transform: rotate(270deg)"
+    >
+      attach_file
+    </mat-icon>
+  </mat-form-field>
+
+  <input
+    hidden
+    (change)="onUploadArquivo($event)"
+    #termoInput
+    type="file"
+    id="file"
+    controlName="termoArquivo"
+    accept=".pdf"
+  />
+</form>
